@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/eneridangelis/device-rest/internal/repository"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -16,4 +17,5 @@ func main() {
 	}
 	log.Println("successfully connected to the database!")
 
+	deviceRepo := repository.NewDeviceRepository(db)
 }
