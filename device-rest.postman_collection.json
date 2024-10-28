@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "a7c960fd-aa23-4192-a670-416b7b3bf49c",
+		"name": "device-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27703952"
+	},
+	"item": [
+		{
+			"name": "AddDevice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"device1\",\n    \"brand\": \"brand1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/devices"
+			},
+			"response": []
+		},
+		{
+			"name": "GetDeviceByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/devices/1"
+			},
+			"response": []
+		},
+		{
+			"name": "ListAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/devices"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDevice",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"device1\",\n    \"brand\": \"brand2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/devices"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/devices/1"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchByBrand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/devices/search?brand=brand2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"search"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "brand2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

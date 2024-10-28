@@ -27,7 +27,7 @@ func (r *deviceRepository) List() ([]*model.Device, error) {
 }
 
 func (r *deviceRepository) Update(device *model.Device) error {
-	return r.db.Save(device).Error
+	return r.db.Updates(device).Error
 }
 
 func (r *deviceRepository) Delete(id uint) error {
